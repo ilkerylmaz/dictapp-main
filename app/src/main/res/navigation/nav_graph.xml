@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.dictionary.fragments.HomeFragment"
+        android:label="Ana Sayfa" />
+
+    <fragment
+        android:id="@+id/nav_dictionary"
+        android:name="com.example.dictionary.fragments.DictionaryFragment"
+        android:label="Sözlük" />
+
+    <fragment
+        android:id="@+id/nav_games"
+        android:name="com.example.dictionary.fragments.GamesFragment"
+        android:label="Oyunlar">
+        
+        <action
+            android:id="@+id/action_nav_games_to_wordMatchingFragment"
+            app:destination="@id/wordMatchingFragment" />
+        
+        <action
+            android:id="@+id/action_nav_games_to_wordPuzzleFragment"
+            app:destination="@id/wordPuzzleFragment" />
+        
+        <action
+            android:id="@+id/action_nav_games_to_memoryGameFragment"
+            app:destination="@id/memoryGameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.dictionary.fragments.ProfileFragment"
+        android:label="Profil" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.dictionary.fragments.LoginFragment"
+        android:label="Giriş Yap" />
+
+    <fragment
+        android:id="@+id/wordMatchingFragment"
+        android:name="com.example.dictionary.fragments.games.WordMatchingFragment"
+        android:label="Kelime Eşleştirme" />
+
+    <fragment
+        android:id="@+id/wordPuzzleFragment"
+        android:name="com.example.dictionary.fragments.games.WordPuzzleFragment"
+        android:label="Kelime Bulmaca" />
+
+    <fragment
+        android:id="@+id/memoryGameFragment"
+        android:name="com.example.dictionary.fragments.games.MemoryGameFragment"
+        android:label="Hafıza Oyunu" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.dictionary.fragments.RegisterFragment"
+        android:label="Kayıt Ol" />
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.dictionary.fragments.ForgotPasswordFragment"
+        android:label="Şifremi Unuttum" />
+
+</navigation> 
